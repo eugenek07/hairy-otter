@@ -8,7 +8,7 @@ from tf_helper import preprocess_audiobuffer
 # !! Modify this in the correct order
 commands = ['left', 'down', 'stop', 'up', 'right', 'no', 'go', 'yes']
 
-loaded_model = models.load_model("saved_model/saved_model")
+loaded_model = models.load_model("saved_model/saved_model", compile=False)
 
 def predict_mic():
     audio = record_audio()
