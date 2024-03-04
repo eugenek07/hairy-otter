@@ -8,7 +8,7 @@ public class Spells : MonoBehaviour
     List<string> spellList = new List<string> { "lumos", "nox", "otterocity", "protego" };
     public GameObject wand;
 
-    puiblic float timeElapsed= 0.0f;
+    public float timeElapsed = 0.0f;
     public float spellDuration = 1.0f;
     void Start()
     {
@@ -21,26 +21,26 @@ public class Spells : MonoBehaviour
         
     }
 
-    void Cast(string spell) 
+    public void Cast(string spell) 
     {
         if (!spellList.Contains(spell)) {
-            Console.WriteLine($"{spell} is not a recognized spell.");
-            break;
+            Debug.Log($"{spell} is not a recognized spell.");
         }
         if (spell == "lumos") {
             if (timeElapsed < spellDuration) {
-                wand.LightSource.intensity = Mathf.Lerp(0, 1, timeElapsed/spellDuration);
+                wand.GetComponent<Light>().intensity = Mathf.Lerp(0, 1, timeElapsed/spellDuration);
                 timeElapsed += Time.deltaTime;
             }
-        } elif (spell == "nox") {
+        } else if (spell == "nox") {
             if (timeElapsed < spellDuration) {
-                wand.LightSource.intensity = Mathf.Lerp(1, 0, timeElapsed/spellDuration);
+                wand.GetComponent<Light>().intensity = Mathf.Lerp(1, 0, timeElapsed/spellDuration);
                 timeElapsed += Time.deltaTime;
             }            
-        } elif (spell == "otterocity") {
+        } else if (spell == "otterocity") {
             //summon a projectile
-        } elif (spell == "protego") {
+        } else if (spell == "protego") {
             //summon a shield
         }
+        return; 
     }
 }

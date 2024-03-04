@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Spells;
 
 public class GameController : MonoBehaviour
 {
     // Start is called before the first frame update
     bool spellProgress;
+
+    public Spells spellsInstance; 
 
     void Start()
     {
@@ -18,7 +19,7 @@ public class GameController : MonoBehaviour
     {
         if (spellProgress) {
         //receive command through MQTT (arduino)
-            Spells.cast("test");
+            spellsInstance.Cast("test");
         }
     }
 }
