@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Spells;
 
 public class GameController : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class GameController : MonoBehaviour
     {
         if (spellProgress) {
         //receive command through MQTT (arduino)
-            Spells.cast("test");
+            
         }
     }
 }
