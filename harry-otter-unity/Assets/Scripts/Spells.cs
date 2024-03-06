@@ -53,7 +53,7 @@ public class Spells : MonoBehaviour
     {
         while (timeElapsed < spellDuration)
         {
-            wandLightSource.intensity = Mathf.Lerp(0, 1, timeElapsed / spellDuration);
+            //wandLightSource.intensity = Mathf.Lerp(0, 1, timeElapsed / spellDuration);
             timeElapsed += Time.deltaTime;
         }
         timeElapsed = 0; // Reset timeElapsed for next use
@@ -64,7 +64,7 @@ public class Spells : MonoBehaviour
     {
         while (timeElapsed < spellDuration)
         {
-            wandLightSource.intensity = Mathf.Lerp(1, 0, timeElapsed / spellDuration);
+            //wandLightSource.intensity = Mathf.Lerp(1, 0, timeElapsed / spellDuration);
             timeElapsed += Time.deltaTime;
         }
         timeElapsed = 0; // Reset timeElapsed for next use
@@ -76,7 +76,7 @@ public class Spells : MonoBehaviour
         // move projectile
     }
 
-    void summonShield() {
+    void SummonShield() {
         Instantiate(shieldPrefab, transform.position, Quaternion.identity);
         // decay and remove shield after predetermined time.
     }    
