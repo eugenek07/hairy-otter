@@ -30,6 +30,7 @@ using UnityEngine.UI;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using M2MqttUnity;
+using System.Globalization;
 
 /// <summary>
 /// Examples for the M2MQTT library (https://github.com/eclipse/paho.mqtt.m2mqtt),
@@ -196,6 +197,7 @@ namespace M2MqttUnity.Examples
         protected override void Start()
         {
             SetUiMessage("Ready.");
+            Debug.Log("hello"); 
             updateUI = true;
             base.Start();
         }
@@ -205,6 +207,19 @@ namespace M2MqttUnity.Examples
             string msg = System.Text.Encoding.UTF8.GetString(message);
             Debug.Log("Received: " + msg);
             StoreMessage(msg);
+            string[] words = msg.Split(' ');
+            string spell = words[0]; 
+            float confidence = float.Parse(words[1], CultureInfo.InvariantCulture.NumberFormat);
+            Debug.Log("casting spell " + spell); 
+            if (spell == "nox")
+            {
+
+            }
+            else if (spell == "lumos")
+            {
+
+            }
+
             if (topic == "M2MQTT_Unity/test")
             {
                 if (autoTest)
