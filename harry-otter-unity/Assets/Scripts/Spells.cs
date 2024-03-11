@@ -8,14 +8,16 @@ public class Spells : MonoBehaviour
     List<string> spellList = new List<string> { "lumos", "nox", "otterocity", "protego" };
     public GameObject wand;
     public GameObject projectilePrefab; // Assign in the inspector
-    public GameObject shieldPrefab; // Assign in the inspecto
+    public GameObject shieldPrefab; // Assign in the inspect
     public Transform projectileSpawnPoint; // Assign a point at tip of wand
 
     public float timeElapsed= 0.0f;
     public float spellDuration = 5.0f;
+
+    private Light wandLightSource;
     void Start()
     {
-        
+        wandLightSource = wand.transform.Find("LightSource").GetComponent<Light>(); 
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class Spells : MonoBehaviour
     {
         
     }
-    void Cast(string spell)
+    public void Cast(string spell)
     {
         if (!spellList.Contains(spell))
         {
@@ -76,7 +78,7 @@ public class Spells : MonoBehaviour
         // move projectile
     }
 
-    void summonShield() {
+    void SummonShield() {
         Instantiate(shieldPrefab, transform.position, Quaternion.identity);
         // decay and remove shield after predetermined time.
     }    
