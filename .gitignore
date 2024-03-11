@@ -41,3 +41,23 @@ realtime-voice-command-recognition/.DS_Store
 
 # Unity3D Asset Server database file
 /harry-otter-unity/AssetStore-5.x/
+
+.tfjs-models/.DS_Store
+.tfjs-models/node_modules
+.tfjs-models/dist/
+.tfjs-models/clone/
+
+.tfjs-models/*/diff
+.tfjs-models/**/*/node_modules
+.tfjs-models/**/*/coverage
+.tfjs-models/**/*/.cache
+.tfjs-models/**/*/yarn-error.log
+.tfjs-models/**/*/yalc.lock
+.tfjs-models/**/*/.yalc
+
+.tfjs-models/rpt2_cache/
+
+.tfjs-models/*.pyc
+
+.tfjs-models/*.tgz
+
