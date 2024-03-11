@@ -272,8 +272,9 @@ namespace M2MqttUnity
             // wait for the given delay
             Debug.Log("waiting before connect...");
             yield return new WaitForSecondsRealtime(connectionDelay / 1000f);
+            Debug.Log("waiting before connect 2...");
             // leave some time to Unity to refresh the UI
-            yield return new WaitForEndOfFrame();
+            // yield return new WaitForEndOfFrame();
 
             Debug.Log("created client = " + client);
             // create client instance 
@@ -313,8 +314,8 @@ namespace M2MqttUnity
             OnConnecting();
 
             // leave some time to Unity to refresh the UI
-            yield return new WaitForEndOfFrame();
-            yield return new WaitForEndOfFrame();
+            // yield return new WaitForEndOfFrame();
+            // yield return new WaitForEndOfFrame();
 
             client.Settings.TimeoutOnConnection = timeoutOnConnection;
             string clientId = Guid.NewGuid().ToString();
