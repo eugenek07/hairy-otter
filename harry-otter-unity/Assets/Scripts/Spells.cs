@@ -12,7 +12,9 @@ public class Spells : MonoBehaviour
     public Transform projectileSpawnPoint; // Assign a point at tip of wand
 
     public float timeElapsed= 0.0f;
-    public float spellDuration = 5.0f;
+    public float spellDuration = 1.0f;
+
+    public Light wandLight; 
 
     void Start()
     {
@@ -53,7 +55,7 @@ public class Spells : MonoBehaviour
     {
         while (timeElapsed < spellDuration)
         {
-            //wandLightSource.intensity = Mathf.Lerp(0, 1, timeElapsed / spellDuration);
+            wandLight.intensity = Mathf.Lerp(0, 1, timeElapsed / spellDuration);
             timeElapsed += Time.deltaTime;
         }
         timeElapsed = 0; // Reset timeElapsed for next use
@@ -64,7 +66,7 @@ public class Spells : MonoBehaviour
     {
         while (timeElapsed < spellDuration)
         {
-            //wandLightSource.intensity = Mathf.Lerp(1, 0, timeElapsed / spellDuration);
+            wandLight.intensity = Mathf.Lerp(1, 0, timeElapsed / spellDuration);
             timeElapsed += Time.deltaTime;
         }
         timeElapsed = 0; // Reset timeElapsed for next use

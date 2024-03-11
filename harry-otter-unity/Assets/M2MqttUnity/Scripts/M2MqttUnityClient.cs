@@ -89,6 +89,7 @@ namespace M2MqttUnity
         {
             if (client == null || !client.IsConnected)
             {
+                Debug.Log("doing connection coroutine"); 
                 StartCoroutine(DoConnect());
             }
         }
@@ -176,6 +177,7 @@ namespace M2MqttUnity
         /// </summary>
         protected virtual void Start()
         {
+            Debug.Log("autoConnect = " + autoConnect);
             if (autoConnect)
             {
                 Connect();
@@ -268,10 +270,12 @@ namespace M2MqttUnity
         private IEnumerator DoConnect()
         {
             // wait for the given delay
+            Debug.Log("waiting before connect...");
             yield return new WaitForSecondsRealtime(connectionDelay / 1000f);
             // leave some time to Unity to refresh the UI
             yield return new WaitForEndOfFrame();
 
+            Debug.Log("created client = " + client);
             // create client instance 
             if (client == null)
             {
@@ -282,6 +286,7 @@ namespace M2MqttUnity
 #else
                     client = new MqttClient(brokerAddress, brokerPort, isEncrypted, null, null, isEncrypted ? MqttSslProtocols.TLSv1_2 : MqttSslProtocols.None); //changed from SSL to TLS 1.2 
 
+                    Debug.Log("created client = " + client); 
                     //Certificates
                         //Version A
                     //System.Security.Cryptography.X509Certificates.X509Certificate cert = new System.Security.Cryptography.X509Certificates.X509Certificate();
