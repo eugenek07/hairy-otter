@@ -57,6 +57,8 @@ namespace M2MqttUnity.Examples
         private List<string> eventMessages = new List<string>();
         private bool updateUI = false;
 
+        Spells spellsCaster; 
+
         public void TestPublish()
         {
             client.Publish("M2MQTT_Unity/test", System.Text.Encoding.UTF8.GetBytes("Test message"), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
@@ -199,6 +201,8 @@ namespace M2MqttUnity.Examples
             SetUiMessage("Ready.");
             Debug.Log("hello"); 
             updateUI = true;
+            spellsCaster = FindObjectOfType<Spells>(); 
+
             base.Start();
         }
 
@@ -210,15 +214,18 @@ namespace M2MqttUnity.Examples
             string[] words = msg.Split(' ');
             string spell = words[0]; 
             float confidence = float.Parse(words[1], CultureInfo.InvariantCulture.NumberFormat);
-            Debug.Log("casting spell " + spell); 
+            Debug.Log("casting spell " + spell);
+            spellsCaster.Cast(spell);
+
+            /*
             if (spell == "nox")
             {
-
             }
             else if (spell == "lumos")
             {
-
+                spellsCaster.LumosSpell();
             }
+            */
 
             if (topic == "M2MQTT_Unity/test")
             {

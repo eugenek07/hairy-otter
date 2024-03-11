@@ -405,7 +405,7 @@ MonoBehaviour:
   shieldPrefab: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
   timeElapsed: 0
-  spellDuration: 5
+  spellDuration: 0.5
   wandLight: {fileID: 1530403289}
 --- !u!1 &1530403287
 GameObject:

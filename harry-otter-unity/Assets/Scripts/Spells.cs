@@ -26,7 +26,8 @@ public class Spells : MonoBehaviour
     {
         
     }
-    void Cast(string spell)
+
+    public void Cast(string spell)
     {
         if (!spellList.Contains(spell))
         {
@@ -53,24 +54,24 @@ public class Spells : MonoBehaviour
 
     void LumosSpell()
     {
-        while (timeElapsed < spellDuration)
-        {
-            wandLight.intensity = Mathf.Lerp(0, 1, timeElapsed / spellDuration);
-            timeElapsed += Time.deltaTime;
-        }
-        timeElapsed = 0; // Reset timeElapsed for next use
-        return;
+        StartCoroutine(LightFade(wandLight.intensity, 1f));
     }
 
     void NoxSpell()
     {
+        StartCoroutine(LightFade(wandLight.intensity, 0f)); 
+    }
+
+    IEnumerator LightFade(float startIntensity, float endIntensity)
+    {
+        float timeElapsed = 0f;
+        float interval = 0.02f; 
         while (timeElapsed < spellDuration)
         {
-            wandLight.intensity = Mathf.Lerp(1, 0, timeElapsed / spellDuration);
-            timeElapsed += Time.deltaTime;
+            wandLight.intensity = Mathf.Lerp(startIntensity, endIntensity, timeElapsed / spellDuration);
+            timeElapsed += interval;
+            yield return new WaitForSeconds(interval);
         }
-        timeElapsed = 0; // Reset timeElapsed for next use
-        return;
     }
 
     void SummonProjectile() {
