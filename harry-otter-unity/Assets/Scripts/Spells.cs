@@ -12,7 +12,10 @@ public class Spells : MonoBehaviour
     public Transform projectileSpawnPoint; // Assign a point at tip of wand
 
     public float timeElapsed= 0.0f;
-    public float spellDuration = 5.0f;
+    public float spellDuration = 1.0f;
+
+    public Light wandLight; 
+
     void Start()
     {
         
@@ -23,7 +26,8 @@ public class Spells : MonoBehaviour
     {
         
     }
-    void Cast(string spell)
+
+    public void Cast(string spell)
     {
         if (!spellList.Contains(spell))
         {
@@ -51,24 +55,24 @@ public class Spells : MonoBehaviour
 
     void LumosSpell()
     {
-        while (timeElapsed < spellDuration)
-        {
-            wandLightSource.intensity = Mathf.Lerp(0, 1, timeElapsed / spellDuration);
-            timeElapsed += Time.deltaTime;
-        }
-        timeElapsed = 0; // Reset timeElapsed for next use
-        return;
+        StartCoroutine(LightFade(wandLight.intensity, 1f));
     }
 
     void NoxSpell()
     {
+        StartCoroutine(LightFade(wandLight.intensity, 0f)); 
+    }
+
+    IEnumerator LightFade(float startIntensity, float endIntensity)
+    {
+        float timeElapsed = 0f;
+        float interval = 0.02f; 
         while (timeElapsed < spellDuration)
         {
-            wandLightSource.intensity = Mathf.Lerp(1, 0, timeElapsed / spellDuration);
-            timeElapsed += Time.deltaTime;
+            wandLight.intensity = Mathf.Lerp(startIntensity, endIntensity, timeElapsed / spellDuration);
+            timeElapsed += interval;
+            yield return new WaitForSeconds(interval);
         }
-        timeElapsed = 0; // Reset timeElapsed for next use
-        return;
     }
 
     void SummonProjectile() {
@@ -76,7 +80,7 @@ public class Spells : MonoBehaviour
         // move projectile
     }
 
-    void summonShield() {
+    void SummonShield() {
         Instantiate(shieldPrefab, transform.position, Quaternion.identity);
         // decay and remove shield after predetermined time.
     }    
