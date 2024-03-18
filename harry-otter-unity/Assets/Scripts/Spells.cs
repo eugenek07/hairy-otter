@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using echo17.EndlessBook;
 
 public class Spells : MonoBehaviour
 {
     // Start is called before the first frame update
     List<string> spellList = new List<string> { "lumos", "nox", "otterocity", "protego" };
     public GameObject wand;
+    public GameObject bookController;
     public GameObject projectilePrefab; // Assign in the inspector
     public GameObject shieldPrefab; // Assign in the inspecto
     public Transform projectileSpawnPoint; // Assign a point at tip of wand
@@ -16,9 +18,11 @@ public class Spells : MonoBehaviour
 
     public Light wandLight; 
 
+    bool bookActive;
+
     void Start()
     {
-        
+        bookActive = false;
     }
 
     // Update is called once per frame
@@ -48,6 +52,9 @@ public class Spells : MonoBehaviour
                 break;
             case "protego":
                 SummonShield();
+                break;
+            case "book":
+                SummonBook();
                 break;
         }
     }
@@ -83,4 +90,10 @@ public class Spells : MonoBehaviour
         Instantiate(shieldPrefab, transform.position, Quaternion.identity);
         // decay and remove shield after predetermined time.
     }    
+
+    void SummonBook(){
+        bookActive = !bookActive;
+        BookController controlScript = bookController.GetComponent<BookController>();
+        controlScript.toggleBook(bookActive);
+    }
 }

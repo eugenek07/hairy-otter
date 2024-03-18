@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wand: {fileID: 0}
+  bookController: {fileID: 1519009221}
   projectilePrefab: {fileID: 0}
   shieldPrefab: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
@@ -437,7 +438,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   book: {fileID: 1771610116}
-  filpSpeed: 1
+  bookObject: {fileID: 2137378491}
+  filpSpeed: 0.5
+  autoFilpSpeed: 0.3
 --- !u!4 &1519009223
 Transform:
   m_ObjectHideFlags: 0
@@ -682,7 +685,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 415041330959768631, guid: 5ef2bcca2a96f38498a8dcf52868e53e, type: 3}
   m_PrefabInstance: {fileID: 2137378490}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2137378491}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b15ee817545aa6a49921977f31ae51e4, type: 3}
@@ -951,11 +954,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
+    - target: {fileID: 311184656859670933, guid: 5ef2bcca2a96f38498a8dcf52868e53e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef2bcca2a96f38498a8dcf52868e53e, type: 3}
+--- !u!1 &2137378491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 311184656859670933, guid: 5ef2bcca2a96f38498a8dcf52868e53e, type: 3}
+  m_PrefabInstance: {fileID: 2137378490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
