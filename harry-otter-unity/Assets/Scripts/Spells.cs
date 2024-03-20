@@ -15,6 +15,7 @@ public class Spells : MonoBehaviour
 
     public float timeElapsed= 0.0f;
     public float spellDuration = 1.0f;
+    // bool accio = false;
 
     public Light wandLight; 
 
@@ -53,8 +54,13 @@ public class Spells : MonoBehaviour
             case "protego":
                 SummonShield();
                 break;
+            // case "accio":
+            //     accio = true;
+            //     break;
             case "book":
-                SummonBook();
+                // if (accio) {
+                    SummonBook();
+                // }
                 break;
         }
     }

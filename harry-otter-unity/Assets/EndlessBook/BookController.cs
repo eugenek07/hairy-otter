@@ -48,6 +48,7 @@ public class BookController : MonoBehaviour
             book.SetPageNumber(1);
 
             book.TurnToPage(book.LastPageNumber, EndlessBook.PageTurnTimeTypeEnum.TimePerPage, autoFilpSpeed, autoFilpSpeed);
+            book.SetPageNumber(1);
         }
         // else {
         //     book.TurnToPage(1, EndlessBook.PageTurnTimeTypeEnum.TimePerPage, autoFilpSpeed, autoFilpSpeed);
