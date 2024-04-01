@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     bool spellProgress;
 
+    public Spells spellsInstance; 
+
     void Start()
     {
         spellProgress = true;
@@ -17,7 +19,7 @@ public class GameController : MonoBehaviour
     {
         if (spellProgress) {
         //receive command through MQTT (arduino)
-            
+            spellsInstance.Cast("test");
         }
     }
 }

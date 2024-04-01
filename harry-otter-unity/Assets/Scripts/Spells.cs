@@ -65,6 +65,7 @@ public class Spells : MonoBehaviour
         }
     }
 
+
     void LumosSpell()
     {
         StartCoroutine(LightFade(wandLight.intensity, 1f));
