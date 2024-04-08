@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708708, g: 0.37838137, b: 0.35725543, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wand: {fileID: 0}
   bookController: {fileID: 1519009221}
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 6221966771080340753, guid: 292b2b67fbc3a49e58934d8d299980cd, type: 3}
   shieldPrefab: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
   timeElapsed: 0

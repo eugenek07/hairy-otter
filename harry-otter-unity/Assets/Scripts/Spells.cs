@@ -24,12 +24,12 @@ public class Spells : MonoBehaviour
     void Start()
     {
         bookActive = false;
+        SummonProjectile();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void Cast(string spell)
@@ -89,7 +89,10 @@ public class Spells : MonoBehaviour
     }
 
     void SummonProjectile() {
-        Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+        Vector3 projectileSpawnPoint = transform.position;
+        GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint, transform.rotation);
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        rb.AddForce(projectile.transform.up * 10f, ForceMode.Impulse);
         // move projectile
     }
 
