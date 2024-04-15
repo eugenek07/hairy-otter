@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 58049890}
   - component: {fileID: 58049889}
   - component: {fileID: 58049888}
+  - component: {fileID: 58049893}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -612,6 +613,21 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
+--- !u!114 &58049893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58049886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cda046ec8726a041b752d34188eba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerActionTrigger: {fileID: 4070272687443464420, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  continuousMoveProvider: {fileID: 442136933}
+  player: {fileID: 1496324789}
 --- !u!1 &442136928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,6 +1962,7 @@ GameObject:
   - component: {fileID: 1125625617}
   - component: {fileID: 1125625616}
   - component: {fileID: 1125625615}
+  - component: {fileID: 1125625620}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -2421,6 +2438,21 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1125625620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125625613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cda046ec8726a041b752d34188eba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerActionTrigger: {fileID: 5184878240668619810, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  continuousMoveProvider: {fileID: 442136933}
+  player: {fileID: 1496324789}
 --- !u!1 &1240804604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,6 +3170,7 @@ GameObject:
   - component: {fileID: 1496324784}
   - component: {fileID: 1496324787}
   - component: {fileID: 1496324788}
+  - component: {fileID: 1496324789}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -3234,6 +3267,24 @@ MonoBehaviour:
   m_LocomotionProvider: {fileID: 442136931}
   m_MinHeight: 1
   m_MaxHeight: 2
+--- !u!114 &1496324789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496324783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1388c7dbf1b75c8498d5d863b94ae4a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 100
+  restartLevel: GameScene
+  minHeightFallDamage: 10
+  damageMultiplyer: 5
+  curHealth: 0
+  isFalling: 0
 --- !u!1 &1506172604
 GameObject:
   m_ObjectHideFlags: 0

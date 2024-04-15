@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     [HideInInspector]
     public float curHealth;
+    [HideInInspector]
     public bool isFalling; 
     #endregion 
     // Start is called before the first frame update
@@ -71,6 +72,7 @@ public class Player : MonoBehaviour
         }
         else if (!isFalling)
         {
+            isFalling = true; 
             fallStartHeight = transform.position.y; 
         }
     }
