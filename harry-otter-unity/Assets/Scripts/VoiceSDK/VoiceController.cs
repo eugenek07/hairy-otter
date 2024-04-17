@@ -20,12 +20,18 @@ public class VoiceController : MonoBehaviour
 
     void Update()
     {
-        // Debug.Log("testing"); 
+        // Debug.Log("testing");
+        if (!voiceRecActive)
+        {
+            ActivateVoiceService();
+        }
+        /*
         if (!voiceRecActive && Input.GetKey("space"))
         {
             Debug.Log("space pressed");
             ActivateVoiceService(); 
         }
+        */
     }
 
     private void ActivateVoiceService()
