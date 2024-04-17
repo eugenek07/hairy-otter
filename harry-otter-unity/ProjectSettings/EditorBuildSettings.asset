@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/WitAI_Wand.unity
+    guid: afa6a2608302e4a0abad7fff2e74da6e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: eec046e8716e3460a838cb10e4996ed9, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5b6a31cc87a26054fbc5f854cc613473, type: 2}
