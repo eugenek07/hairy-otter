@@ -3912,7 +3912,6 @@ GameObject:
   - component: {fileID: 1594020208}
   m_Layer: 0
   m_Name: AttatchTransform
->>>>>>> GeneralXR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
