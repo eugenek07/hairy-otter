@@ -730,7 +730,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Trigger",
+                    "name": "trigger",
                     "type": "Button",
                     "id": "78fc495a-6b04-4ac6-b657-ea3e6099c977",
                     "expectedControlType": "Button",
@@ -835,7 +835,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Trigger",
+                    "action": "trigger",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

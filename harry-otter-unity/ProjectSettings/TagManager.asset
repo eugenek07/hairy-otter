@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Teleport
+  - wand
+  - broom
+  - terrain
   layers:
   - Default
   - TransparentFX
