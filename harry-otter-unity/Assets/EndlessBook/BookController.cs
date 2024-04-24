@@ -9,8 +9,8 @@ public class BookController : MonoBehaviour
     public GameObject bookObject;
 
     public float filpSpeed;
-
-    public float autoFilpSpeed;
+    public float autoFilpTime = 3.0f;
+    public int flipPage = 7;
 
     bool testActive = true;
     // Start is called before the first frame update
@@ -37,6 +37,12 @@ public class BookController : MonoBehaviour
         } else if (Input.GetKeyDown(KeyCode.D)) {
             testActive = !testActive;
             toggleBook(testActive);
+        } else if (Input.GetKeyDown(KeyCode.T)) {
+            testActive = true;
+            testBook();
+        } else if (Input.GetKeyDown(KeyCode.A)) {
+            // InsertPageData(int pageNumber)
+            // SetPageData(int pageNumber, PageData data): Sets the material for a page at the page number.
         }
     }
 
@@ -44,15 +50,29 @@ public class BookController : MonoBehaviour
         bookObject.SetActive(bookActive);
         
         if (bookActive) {
+            for (int i = 0;  i < flipPage; i++){
+                PageData pg = book.InsertPageData(1);
+                book.SetPageData(1, pg);
+            }
             book.SetState(EndlessBook.StateEnum.ClosedFront, 0);
-            book.SetPageNumber(1);
-
-            book.TurnToPage(book.LastPageNumber, EndlessBook.PageTurnTimeTypeEnum.TimePerPage, autoFilpSpeed, autoFilpSpeed);
-            book.SetPageNumber(1);
+            //book.SetPageNumber(EndlessBook.farPageNumber);
+            book.TurnToPage(flipPage, EndlessBook.PageTurnTimeTypeEnum.TotalTurnTime, autoFilpTime);    
+            int index = 0;
+            while (index<flipPage){
+                if (!book.IsTurningPages){
+                    book.RemovePageData(1);
+                    index++;
+                }
+            }
         }
         // else {
         //     book.TurnToPage(1, EndlessBook.PageTurnTimeTypeEnum.TimePerPage, autoFilpSpeed, autoFilpSpeed);
         //     bookObject.SetActive(bookActive);
         // }
+    }
+
+    public void testBook(){
+        book.SetPageNumber(1);
+        book.TurnForward(0.8f);
     }
 }
