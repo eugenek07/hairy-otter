@@ -7,7 +7,7 @@ public class ChangeLightConduit : MonoBehaviour
 {
     private const string CHANGE_LIGHT_INTENT = "change_light";
 
-    Spells spellCaster; 
+    Spells spellCaster;
 
     void Start()
     {

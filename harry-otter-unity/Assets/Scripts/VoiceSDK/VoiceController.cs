@@ -11,7 +11,10 @@ public class VoiceController : MonoBehaviour
     private VoiceServiceRequest voiceServiceRequest;
     private VoiceServiceRequestEvents voiceServiceRequestEvents;
 
-    bool voiceRecActive = false; 
+    bool voiceRecActive = false;
+
+    float timeUntilAllowVoice = 0f;
+    float voiceCooldown = 0.5f;
 
     void Start()
     {
@@ -21,10 +24,6 @@ public class VoiceController : MonoBehaviour
     void Update()
     {
         // Debug.Log("testing");
-        if (!voiceRecActive)
-        {
-            ActivateVoiceService();
-        }
         /*
         if (!voiceRecActive && Input.GetKey("space"))
         {
@@ -34,7 +33,18 @@ public class VoiceController : MonoBehaviour
         */
     }
 
-    private void ActivateVoiceService()
+    public void ToggleVoiceService()
+    {
+        if (Time.time > timeUntilAllowVoice)
+        {
+            if (!voiceRecActive) ActivateVoiceService(); 
+            else DeactivateVoiceService();
+
+            timeUntilAllowVoice = Time.time + voiceCooldown;
+        }
+    }
+
+    public void ActivateVoiceService()
     {
         Debug.Log("VoiceController -> ActivateVoiceService()");
 
@@ -47,15 +57,18 @@ public class VoiceController : MonoBehaviour
         }
 
         voiceServiceRequest = voiceService.Activate(voiceServiceRequestEvents);
-        voiceRecActive = true; 
+        voiceRecActive = true;
     }
 
-    private void DeactivateVoiceService()
+    public void DeactivateVoiceService()
     {
-        Debug.Log("VoiceController -> DeactivateVoiceService()");
+        if (Time.time > timeUntilAllowVoice)
+        {
+            Debug.Log("VoiceController -> DeactivateVoiceService()");
 
-        voiceServiceRequest.DeactivateAudio();
-        voiceRecActive = false; 
+            voiceServiceRequest.DeactivateAudio();
+            voiceRecActive = false;
+        }
     }
 
     private void OnInit(VoiceServiceRequest request)

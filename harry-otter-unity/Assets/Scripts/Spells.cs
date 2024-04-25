@@ -6,7 +6,7 @@ using echo17.EndlessBook;
 public class Spells : MonoBehaviour
 {
     // Start is called before the first frame update
-    List<string> spellList = new List<string> { "lumos", "nox", "otterocity", "protego" };
+    List<string> spellList = new List<string> { "lumos", "nox", "attack", "shield", "book" };
     public GameObject wand;
     public GameObject bookController;
     public GameObject projectilePrefab; // Assign in the inspector
@@ -24,12 +24,13 @@ public class Spells : MonoBehaviour
     void Start()
     {
         bookActive = false;
-        SummonProjectile();
+        //SummonProjectile();
     }
 
     // Update is called once per frame
     void Update()
     {
+
     }
 
     public void Cast(string spell)
@@ -48,10 +49,10 @@ public class Spells : MonoBehaviour
             case "nox":
                 NoxSpell();
                 break;
-            case "otterocity":
-                SummonProjectile();
+            case "attack":
+                // SummonProjectile();
                 break;
-            case "protego":
+            case "shield":
                 SummonShield();
                 break;
             // case "accio":
@@ -97,13 +98,13 @@ public class Spells : MonoBehaviour
     }
 
     void SummonShield() {
-        Instantiate(shieldPrefab, transform.position, Quaternion.identity);
+        // Instantiate(shieldPrefab, transform.position, Quaternion.identity);
         // decay and remove shield after predetermined time.
     }    
 
     void SummonBook(){
-        bookActive = !bookActive;
-        BookController controlScript = bookController.GetComponent<BookController>();
-        controlScript.toggleBook(bookActive);
+        //bookActive = !bookActive;
+        //BookController controlScript = bookController.GetComponent<BookController>();
+        //controlScript.toggleBook(bookActive);
     }
 }
