@@ -1136,10 +1136,6 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
-  m_TrackScale: 1
-  m_SmoothScale: 0
-  m_SmoothScaleAmount: 8
-  m_TightenScale: 0.1
   m_ThrowOnDetach: 1
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
@@ -3470,7 +3466,7 @@ MonoBehaviour:
   m_PositionInput:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Position Input
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 893cb451-0cdb-4bef-a613-216b65dfab0b
@@ -3482,7 +3478,7 @@ MonoBehaviour:
   m_RotationInput:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Rotation Input
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 9551e2ba-8371-4593-bf00-cb8a3079d88f
@@ -3529,7 +3525,6 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  m_HasMigratedActions: 1
 --- !u!81 &1514750720
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4097,4 +4092,3 @@ SceneRoots:
   - {fileID: 1506172605}
   - {fileID: 1852168420}
   - {fileID: 964289740}
-
