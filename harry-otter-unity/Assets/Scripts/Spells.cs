@@ -9,9 +9,10 @@ public class Spells : MonoBehaviour
     List<string> spellList = new List<string> { "lumos", "nox", "attack", "shield", "book" };
     public GameObject wand;
     public GameObject bookController;
-    public GameObject projectilePrefab; // Assign in the inspector
-    public GameObject shieldPrefab; // Assign in the inspecto
-    public Transform projectileSpawnPoint; // Assign a point at tip of wand
+    public GameObject projectilePrefab; 
+    public GameObject shieldPrefab; 
+    public Transform projectileSpawnPoint;
+    public Transform player; 
 
     public float timeElapsed= 0.0f;
     public float spellDuration = 1.0f;
@@ -50,7 +51,7 @@ public class Spells : MonoBehaviour
                 NoxSpell();
                 break;
             case "attack":
-                // SummonProjectile();
+                SummonProjectile();
                 break;
             case "shield":
                 SummonShield();
@@ -90,21 +91,29 @@ public class Spells : MonoBehaviour
     }
 
     void SummonProjectile() {
-        Vector3 projectileSpawnPoint = transform.position;
-        GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint, transform.rotation);
+        //Vector3 projectileEulerAngle = transform.rotation.eulerAngles;
+        //projectileEulerAngle = new Vector3(projectileEulerAngle.x, projectileEulerAngle.y + 180, projectileEulerAngle.z);
+        GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, transform.rotation);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         rb.AddForce(projectile.transform.up * 10f, ForceMode.Impulse);
         // move projectile
+        StartCoroutine(DelayDestory(projectile, 10f)); 
     }
 
     void SummonShield() {
-        // Instantiate(shieldPrefab, transform.position, Quaternion.identity);
-        // decay and remove shield after predetermined time.
+        Instantiate(shieldPrefab, transform.position, Quaternion.identity);
     }    
 
     void SummonBook(){
         //bookActive = !bookActive;
         //BookController controlScript = bookController.GetComponent<BookController>();
         //controlScript.toggleBook(bookActive);
+    }
+
+    IEnumerator DelayDestory(GameObject go, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        Destroy(go); 
     }
 }
