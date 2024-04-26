@@ -8,6 +8,8 @@ TagManager:
   - wand
   - broom
   - terrain
+  - playerAttack
+  - enemyAttack
   layers:
   - Default
   - TransparentFX

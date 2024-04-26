@@ -16,7 +16,10 @@ public class DisplayUI : MonoBehaviour
 
     public void Show() {
         icon.SetActive(true);
+    }
 
+    public void ShowAlpha()
+    {
         if (iconSprite != null)
         {
             Color temp = iconSprite.color;
