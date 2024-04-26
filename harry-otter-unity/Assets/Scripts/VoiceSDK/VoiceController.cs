@@ -16,6 +16,8 @@ public class VoiceController : MonoBehaviour
     float timeUntilAllowVoice = 0f;
     float voiceCooldown = 0.5f;
 
+    [SerializeField] DisplayUI micIcon; 
+
     void Start()
     {
         // Debug.Log("... start ");
@@ -58,6 +60,8 @@ public class VoiceController : MonoBehaviour
 
         voiceServiceRequest = voiceService.Activate(voiceServiceRequestEvents);
         voiceRecActive = true;
+
+        micIcon.Show();
     }
 
     public void DeactivateVoiceService()
@@ -68,6 +72,8 @@ public class VoiceController : MonoBehaviour
 
             if (voiceServiceRequest != null) voiceServiceRequest.DeactivateAudio();
             voiceRecActive = false;
+
+            micIcon.Hide(); 
         }
     }
 
