@@ -8,7 +8,7 @@ public class Spells : MonoBehaviour
     // Start is called before the first frame update
     List<string> spellList = new List<string> { "lumos", "nox", "attack", "shield", "book" };
     public GameObject wand;
-    public GameObject bookController;
+    public BookController bookController;
     public GameObject projectilePrefab; 
     public GameObject shieldPrefab; 
     public Transform projectileSpawnPoint;
@@ -63,8 +63,8 @@ public class Spells : MonoBehaviour
             //     accio = true;
             //     break;
             case "book":
+                bookController.spawnBook(); 
                 // if (accio) {
-                    SummonBook();
                 // }
                 break;
         }
