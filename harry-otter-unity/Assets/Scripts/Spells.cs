@@ -12,7 +12,10 @@ public class Spells : MonoBehaviour
     public GameObject projectilePrefab; 
     public GameObject shieldPrefab; 
     public Transform projectileSpawnPoint;
-    public Transform player; 
+    public Transform xrRig;
+    public Transform playerCamera;
+
+    private CharacterController m_charController; 
 
     public float timeElapsed= 0.0f;
     public float spellDuration = 1.0f;
@@ -101,7 +104,12 @@ public class Spells : MonoBehaviour
     }
 
     void SummonShield() {
-        Instantiate(shieldPrefab, transform.position, Quaternion.identity);
+        m_charController = xrRig.GetComponent<CharacterController>();
+        float groundHeight = m_charController.center.y - m_charController.height / 2f;
+        Vector3 groundPos = new Vector3(playerCamera.position.x, groundHeight, playerCamera.position.z); 
+
+        GameObject shield = Instantiate(shieldPrefab, groundPos, Quaternion.identity);
+        StartCoroutine(DelayDestory(shield, 10f)); 
     }    
 
     void SummonBook(){

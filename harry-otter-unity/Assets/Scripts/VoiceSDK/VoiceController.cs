@@ -66,7 +66,7 @@ public class VoiceController : MonoBehaviour
         {
             Debug.Log("VoiceController -> DeactivateVoiceService()");
 
-            voiceServiceRequest.DeactivateAudio();
+            if (voiceServiceRequest != null) voiceServiceRequest.DeactivateAudio();
             voiceRecActive = false;
         }
     }
