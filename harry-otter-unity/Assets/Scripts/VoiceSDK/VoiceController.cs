@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Meta.WitAi; 
 using Meta.WitAi.Requests;
 using UnityEngine;
+using TMPro; 
 
 public class VoiceController : MonoBehaviour
 {
@@ -16,11 +17,13 @@ public class VoiceController : MonoBehaviour
     float timeUntilAllowVoice = 0f;
     float voiceCooldown = 0.5f;
 
-    [SerializeField] DisplayUI micIcon; 
+    [SerializeField] DisplayUI micIcon;
+    [SerializeField] DisplayUI speechTextUI;
+    [SerializeField] TMP_Text speechText;
 
     void Start()
     {
-        // Debug.Log("... start ");
+        
     }
 
     void Update()
@@ -61,7 +64,9 @@ public class VoiceController : MonoBehaviour
         voiceServiceRequest = voiceService.Activate(voiceServiceRequestEvents);
         voiceRecActive = true;
 
-        micIcon.Show();
+        micIcon.ShowAlpha();
+        speechText.text = "";
+        speechTextUI.Hide();
     }
 
     public void DeactivateVoiceService()
@@ -73,7 +78,8 @@ public class VoiceController : MonoBehaviour
             if (voiceServiceRequest != null) voiceServiceRequest.DeactivateAudio();
             voiceRecActive = false;
 
-            micIcon.Hide(); 
+            micIcon.HideAlpha();
+            speechTextUI.Show(); 
         }
     }
 

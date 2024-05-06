@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Meta.WitAi;
 using UnityEngine;
+using TMPro; 
 
 public class CastSpellConduit : MonoBehaviour
 {
     private const string CAST_SPELL_INTENT = "cast_spell";
 
     Spells spellCaster;
+
+    [SerializeField] private TMP_Text speechText; 
 
     void Start()
     {
@@ -25,6 +28,8 @@ public class CastSpellConduit : MonoBehaviour
 
         if (!string.IsNullOrEmpty(resolved_value))
         {
+            speechText.text = resolved_value[0].ToString().ToUpper() + resolved_value.Substring(1) + "."; 
+
             if (resolved_value == "attack")
             {
                 Debug.Log("Attack!");

@@ -14,6 +14,11 @@ public class Spells : MonoBehaviour
     public Transform projectileSpawnPoint;
     public Transform xrRig;
     public Transform playerCamera;
+    public PlayerHP playerHP;
+
+    private AudioSource audioSource;
+    public AudioClip fireBallClip;
+
 
     private CharacterController m_charController; 
 
@@ -29,6 +34,7 @@ public class Spells : MonoBehaviour
     {
         bookActive = false;
         //SummonProjectile();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -100,7 +106,9 @@ public class Spells : MonoBehaviour
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         rb.AddForce(projectile.transform.up * 10f, ForceMode.Impulse);
         // move projectile
-        StartCoroutine(DelayDestory(projectile, 10f)); 
+        StartCoroutine(DelayDestroy(projectile, 10f));
+
+        audioSource.PlayOneShot(fireBallClip); 
     }
 
     void SummonShield() {
@@ -109,8 +117,20 @@ public class Spells : MonoBehaviour
         Vector3 groundPos = new Vector3(playerCamera.position.x, groundHeight, playerCamera.position.z); 
 
         GameObject shield = Instantiate(shieldPrefab, groundPos, Quaternion.identity);
-        StartCoroutine(DelayDestory(shield, 10f)); 
-    }    
+        StartCoroutine(ToggleShieldStatus()); 
+        StartCoroutine(DelayDestroy(shield, 10f)); 
+    }
+
+    IEnumerator ToggleShieldStatus()
+    {
+        yield return new WaitForSeconds(1f);
+
+        playerHP.EnableShield();
+
+        yield return new WaitForSeconds(8.5f);
+
+        playerHP.DisableShield();
+    }
 
     void SummonBook(){
         //bookActive = !bookActive;
@@ -118,7 +138,7 @@ public class Spells : MonoBehaviour
         //controlScript.toggleBook(bookActive);
     }
 
-    IEnumerator DelayDestory(GameObject go, float seconds)
+    public static IEnumerator DelayDestroy(GameObject go, float seconds)
     {
         yield return new WaitForSeconds(seconds);
 
