@@ -223,12 +223,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [ ] Spell making
     - [ ] Potion making
     - [ ] Wand making
-    - [ ] Shop (Diagon Alley)
+    - [ ] Shop (diagon alley)
     - [ ] Dragon / mythical animal taming
     - [ ] Storymode
     - [ ] Multiplayer mode
     - [ ] Sorting Hat 
-    - [ ] Life-sized Chess (sorcerer's stone)
+    - [ ] Chess (life-sized, sorcerer's stone)
     - [ ] Platform 9 3/4
     - [ ] Triwizard Tournament
 
@@ -241,22 +241,11 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- CONTRIBUTING -->
 ## Contributions
 
-Jonas So Gutierrez - VR hands, VR movement (continuous and teleport), VR grab, broom, flying, 
-Eugene Kang - wand casting, player movement, game environment, assets, target dummies
-Yena Kang - book, animal summoning (expecto patronum), research in voice recognition models, TensorFlow
-Jaeha Yi - wand casting, VR movement, 
-John Yoon - projectile firing, wand movement, research in voice recognition models, TensorFlow
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+* Jonas So Gutierrez - implemented VR hands, VR movement (continuous and teleport), VR grab, flying
+* Eugene Kang - implemented wand casting, player movement; created game environment, assets, and target dummies
+* Yena Kang - created spellbook, animal summoning (expecto patronum); researched and integrated voice recognition models (TensorFlow) 
+* Jaeha Yi - implemented wand casting, VR movement; created game environment, assets, and demo; researched and integrated voice recognition models (TensorFlow, Wit.ai)
+* John Yoon - implemented projectile firing, wand movement; researched and integrated voice recognition models (TensorFlow)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
