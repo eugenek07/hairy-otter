@@ -22,25 +22,40 @@ public class Spells : MonoBehaviour
 
     private CharacterController m_charController; 
 
-    public float timeElapsed= 0.0f;
     public float spellDuration = 1.0f;
+
     // bool accio = false;
 
     public Light wandLight; 
 
     bool bookActive;
 
+    public bool webVersion = false;
+
+    private VoiceController m_voiceController; 
+
     void Start()
     {
         bookActive = false;
         //SummonProjectile();
         audioSource = GetComponent<AudioSource>();
+
+        if (webVersion)
+        {
+            m_voiceController = FindObjectOfType<VoiceController>(); 
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetMouseButtonDown(0))
+        {
+            m_voiceController.ActivateVoiceService(); 
+        }
+        else if (Input.GetMouseButtonUp(0)) {
+            m_voiceController.DeactivateVoiceService();
+        }
     }
 
     public void Cast(string spell)
@@ -112,9 +127,17 @@ public class Spells : MonoBehaviour
     }
 
     void SummonShield() {
-        m_charController = xrRig.GetComponent<CharacterController>();
-        float groundHeight = m_charController.center.y - m_charController.height / 2f;
-        Vector3 groundPos = new Vector3(playerCamera.position.x, groundHeight, playerCamera.position.z); 
+        Vector3 groundPos = new Vector3(0, 0, 0); 
+        if (!webVersion)
+        {
+            m_charController = xrRig.GetComponent<CharacterController>();
+            float groundHeight = m_charController.center.y - m_charController.height / 2f;
+            groundPos = new Vector3(playerCamera.position.x, groundHeight, playerCamera.position.z);
+        }
+        else
+        {
+            groundPos = xrRig.position; 
+        }
 
         GameObject shield = Instantiate(shieldPrefab, groundPos, Quaternion.identity);
         StartCoroutine(ToggleShieldStatus()); 

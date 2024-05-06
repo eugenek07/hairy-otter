@@ -91,6 +91,6 @@ public class VoiceController : MonoBehaviour
     private void OnComplete(VoiceServiceRequest request)
     {
         // uI.SetActive(false);
-        DeactivateVoiceService();
+        if (voiceServiceRequest != null) DeactivateVoiceService();
     }
 }

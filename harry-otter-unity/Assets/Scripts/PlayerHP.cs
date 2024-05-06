@@ -8,6 +8,7 @@ public class PlayerHP : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Debug.Log("Hit by " + other.name); 
         if (other.tag == "enemyAttack" && !shielded)
         {
             Hit();

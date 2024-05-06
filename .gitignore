@@ -4,6 +4,8 @@ realtime-voice-command-recognition/.venv
 .DS_Store
 realtime-voice-command-recognition/.DS_Store
 
+/build/
+
 # Unity generated
 /harry-otter-unity/[Ll]ibrary/
 /harry-otter-unity/[Tt]emp/

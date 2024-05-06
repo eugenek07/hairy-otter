@@ -8,8 +8,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: 3d1cf868ddd49487ab8e4c98973d3e44
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dungeon Scene.unity
     guid: 57d2e471e590f4a85aabcc89570d0601
+  - enabled: 1
+    path: Assets/Scenes/Dungeon Scene Web.unity
+    guid: 42b616877b61c477e8e462fc8aa460a1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: eec046e8716e3460a838cb10e4996ed9, type: 2}
