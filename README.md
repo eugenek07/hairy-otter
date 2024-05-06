@@ -34,10 +34,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Hairy Otter</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Experience a magical world and cast spells in VR. 
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -152,6 +152,45 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- GETTING STARTED -->
+## 
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Voice Recognition
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Spell Casting 
+
+
+
+### Game Environment 
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -167,13 +206,31 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Working demo
+- [ ] Graphics 
+    - [ ] Water 
+    - [ ] Shaders 
+    - [ ] Post-processing (fog, lighting)
+- [ ] AI & Machine Learning 
+    - [ ] Gesture Recognition
+    - [ ] Speech Recognition      
+- [ ] Spells 
+    - [ ] Wand grabbing skill (w/o wand) 
+    - [ ] AR interaction (MR Utility Kit, passthrough layer) 
+    - [ ] Spellbook 
+- [ ] Minigames / Features
+    - [ ] Quidditch / broom riding
+    - [ ] Spell making
+    - [ ] Potion making
+    - [ ] Wand making
+    - [ ] Shop (Diagon Alley)
+    - [ ] Dragon / mythical animal taming
+    - [ ] Storymode
+    - [ ] Multiplayer mode
+    - [ ] Sorting Hat 
+    - [ ] Life-sized Chess (sorcerer's stone)
+    - [ ] Platform 9 3/4
+    - [ ] Triwizard Tournament
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
@@ -182,7 +239,13 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contributions
+
+Jonas So Gutierrez - VR hands, VR movement (continuous and teleport), VR grab, broom, flying, 
+Eugene Kang - wand casting, player movement, game environment, assets, target dummies
+Yena Kang - book, animal summoning (expecto patronum), research in voice recognition models, TensorFlow
+Jaeha Yi - wand casting, VR movement, 
+John Yoon - projectile firing, wand movement, research in voice recognition models, TensorFlow
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
