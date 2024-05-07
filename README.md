@@ -33,22 +33,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/hairy-otter-art.png" alt="Logo" width="160" height="120">
   </a>
 
   <h3 align="center">Hairy Otter</h3>
 
   <p align="center">
     Experience a magical world and cast spells in VR. 
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -60,22 +51,13 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#current-features">Current Features</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contributions">Contributions</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -85,20 +67,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About the Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+We're a team of UC Berkeley students (computer scientists, game developers, artists, and engineers) joined together to create an immersive and inspiring spellcasting game in virtual reality. 
 
-We're a team of UC Berkeley students (computer scientists, game developers, artists, engineers, ) joined together to create a VR spellcasting game. Our goal is to create an experience 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Demo 
+**05/06/2024**
 
 
 
@@ -114,7 +87,7 @@ Use the `BLANK_README.md` to get started.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Help improve the world of hairy otters! Follow these simple steps:
+Help improve the world of hairy otters! Follow these steps:
 
 ### Installation
 
@@ -123,16 +96,15 @@ Help improve the world of hairy otters! Follow these simple steps:
    git clone https://github.com/your_username_/hairy-otter.git
    ```
 2. Install Unity packages 
-  * _XR_
+  * XR
     * XR Interaction Toolkit
     * Oculus XR Plugin
     * XR Plugin Management
     * Meta Voice SDK
-  * _General_
-    * H
-    * H
-    * H
-    * H
+  * General
+    * TextMeshPro
+    * Unity UI
+    * Universal RP
 
 ### Contributing 
 
@@ -150,35 +122,43 @@ Help improve the world of hairy otters! Follow these simple steps:
 
 Refer to this section to learn the technical details of current features. 
 
-### Voice Recognition
+### Voice Recognition and Spell Casting
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+We utilized the Voice SDK powered by Wit.ai to recognize voice commands. The user can activate and deactivate the voice service using quest controllers. 
 
-### Spell Casting 
+**Current commands**
+- _lumos_ - illuminates the wand 
+- _nox_ - deilluminates the wand
+- _attack_ - launch a fireball 
+- _shield_ - create a shield 
+- _book_ - spawn a book 
 
 
 
-### Game Environment 
+**Relevant scripts**
+```
+Assets/Scripts/
+│   Spells.cs
+│
+└───VoiceSDK/
+│   │   VoiceController.cs
+│   │   CastSpellConduit.cs
+│   │   ...
+...
+```
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+**Development Progress**
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+We initially implemented voice recognition using TensorFlow and sent the recognized voice command to the Unity application, which allowed us to build and deploy custom machine learning models. 
+
+To keep our solution contained within Unity, we later switched to using Voice SDK provided by the Meta Quest. 
+
+**References**
+
+Learn how to use Voice SDK: 
+* [Incoroporate Voice SDK into Unity - Medium](https://medium.com/taikonauten-magazine-english/unity-mixed-reality-tutorial-voice-sdk-5f875043ab0a)
+* [Voice-enabled VR Unity App - GitHub](https://github.com/wit-ai/wit-unity/blob/main/Tutorials/ShapesTutorial.md)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,7 +166,7 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- ROADMAP -->
 ## Roadmap
 - [x] Speech Recognition
-- [x] Working demo
+- [x] Demo - 05/06/2024 (Meta Quest 2, Mac, Windows build, with basic spellcasting)
 - [ ] Graphics 
     - [ ] 3D modeling and animation 
     - [ ] Post-processing (fog, lighting)
@@ -209,6 +189,8 @@ _Below is an example of how you can instruct your audience on installing and set
     - [ ] Sorting Hat 
     - [ ] Chess (life-sized, sorcerer's stone)
     - [ ] Platform 9 3/4
+    - [ ] Unique enemy battles (basilisk, giant spider, dementor)
+    - [ ] Dueling (npcs, lord voldemort)
     - [ ] Triwizard Tournament
     - [ ] Storymode
     - [ ] Multiplayer mode
@@ -224,11 +206,11 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- CONTRIBUTING -->
 ## Contributions
 
-* Jonas So Gutierrez - implemented VR hands, VR movement (continuous and teleport), VR grab, flying
-* Eugene Kang - implemented spell casting, player movement; created game environment, assets, and target dummies
-* Yena Kang - created spellbook, animal summoning (expecto patronum); researched and integrated voice recognition models (TensorFlow) 
-* Jaeha Yi - implemented spell casting, VR movement; created game environment, UI, assets, and demo; researched and integrated voice recognition models (TensorFlow, Wit.ai)
-* John Yoon - implemented projectile firing, wand movement; researched and integrated voice recognition models (TensorFlow)
+* Jonas So Gutierrez - Implemented VR hands, VR movement (continuous and teleport), VR grab, and flying
+* Eugene Kang - Implemented spell casting, and player movement; Created game environment and target dummies
+* Yena Kang - Created spellbook, animal summoning (expecto patronum); Integrated voice recognition models (TensorFlow) 
+* Jaeha Yi - Implemented spell casting, VR movement, and enemies; Created game environment, UI, and demo; Integrated voice recognition models (TensorFlow, Wit.ai)
+* John Yoon - Implemented projectile firing, wand movement; Integrated voice recognition models (TensorFlow)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -241,21 +223,21 @@ Thank you to [XR@Berkeley](https://xr.studentorg.berkeley.edu/home/) for support
 
 Resources we found helpful and utilized throughout our journey: 
 
-_XR_
+XR
 * [XR setup](https://xr.studentorg.berkeley.edu/decal/labs/oculus/lab1/)
 * [XR movement](https://www.youtube.com/watch?v=Jvb7sAR2Tmk)
 
-_Voice SDK - Wit.ai_
+Voice SDK 
 * [Incoroporate Voice SDK into Unity - Medium](https://medium.com/taikonauten-magazine-english/unity-mixed-reality-tutorial-voice-sdk-5f875043ab0a)
 * [Voice-enabled VR Unity App - GitHub](https://github.com/wit-ai/wit-unity/blob/main/Tutorials/ShapesTutorial.md)
 
-_Features_
+Features
 * [Animal Summoning](https://www.youtube.com/watch?v=vMd5GnP5c8o)
 * [Magic Effects](https://assetstore.unity.com/packages/vfx/particles/spells/magic-effects-free-247933)
 * [Endless Book](https://assetstore.unity.com/packages/3d/props/endlessbook-134213)
 * [Wand](https://assetstore.unity.com/packages/3d/props/weapons/3d-items-free-wand-pack-46225)
 
-_Game Environment_
+Game Environment
 * [Dungeon](https://assetstore.unity.com/packages/3d/environments/dungeons/ultimate-low-poly-dungeon-143535)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
