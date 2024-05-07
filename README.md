@@ -18,12 +18,14 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<!-- 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+-->
 
 
 
@@ -31,22 +33,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/hairy-otter-art.png" alt="Logo" width="160" height="120">
   </a>
 
   <h3 align="center">Hairy Otter</h3>
 
   <p align="center">
     Experience a magical world and cast spells in VR. 
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -58,22 +51,13 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#current-features">Current Features</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contributions">Contributions</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -81,37 +65,20 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About the Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+We're a team of UC Berkeley students (computer scientists, game developers, artists, and engineers) joined together to create an immersive and inspiring spellcasting game in virtual reality. 
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Demo 
+**05/06/2024**
 
 
 
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Unity][Unity.com]][Unity-url]
+* [![Meta][Meta.com]][Meta-url]
+* [![Witai][Wit.ai]][Wit.ai-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,97 +87,91 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Help improve the world of hairy otters! Follow these steps:
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+1. Fork and clone the project
+   ```sh
+   git clone https://github.com/your_username_/hairy-otter.git
+   ```
+2. Install Unity packages 
+  * XR
+    * XR Interaction Toolkit
+    * Oculus XR Plugin
+    * XR Plugin Management
+    * Meta Voice SDK
+  * General
+    * TextMeshPro
+    * Unity UI
+    * Universal RP
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+### Contributing 
+
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
-## 
+## Current Features
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Refer to this section to learn the technical details of current features. 
 
-### Voice Recognition
+### Voice Recognition and Spell Casting
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+We utilized the Voice SDK powered by Wit.ai to recognize voice commands. The user can activate and deactivate the voice service using quest controllers. 
 
-### Spell Casting 
-
-
-
-### Game Environment 
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+**Current commands**
+- _lumos_ - illuminates the wand 
+- _nox_ - deilluminates the wand
+- _attack_ - launch a fireball 
+- _shield_ - create a shield 
+- _book_ - spawn a book 
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+**Relevant scripts**
+```
+Assets/Scripts/
+│   Spells.cs
+│
+└───VoiceSDK/
+│   │   VoiceController.cs
+│   │   CastSpellConduit.cs
+│   │   ...
+...
+```
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+**Development Progress**
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+We initially implemented voice recognition using TensorFlow and sent the recognized voice command to the Unity application, which allowed us to build and deploy custom machine learning models. 
+
+To keep our solution contained within Unity, we later switched to using Voice SDK provided by the Meta Quest. 
+
+**References**
+
+Learn how to use Voice SDK: 
+* [Incoroporate Voice SDK into Unity - Medium](https://medium.com/taikonauten-magazine-english/unity-mixed-reality-tutorial-voice-sdk-5f875043ab0a)
+* [Voice-enabled VR Unity App - GitHub](https://github.com/wit-ai/wit-unity/blob/main/Tutorials/ShapesTutorial.md)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
 ## Roadmap
-
-- [x] Working demo
+- [x] Speech Recognition
+- [x] Demo - 05/06/2024 (Meta Quest 2, Mac, Windows build, with basic spellcasting)
 - [ ] Graphics 
-    - [ ] Water 
-    - [ ] Shaders 
+    - [ ] 3D modeling and animation 
     - [ ] Post-processing (fog, lighting)
+    - [ ] Shaders 
+    - [ ] Water 
 - [ ] AI & Machine Learning 
     - [ ] Gesture Recognition
     - [ ] Speech Recognition      
@@ -218,21 +179,25 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [ ] Wand grabbing skill (w/o wand) 
     - [ ] AR interaction (MR Utility Kit, passthrough layer) 
     - [ ] Spellbook 
-- [ ] Minigames / Features
-    - [ ] Quidditch / broom riding
+- [ ] Minigames & Features
+    - [ ] Broom riding (Quidditch)
     - [ ] Spell making
     - [ ] Potion making
     - [ ] Wand making
     - [ ] Shop (diagon alley)
-    - [ ] Dragon / mythical animal taming
-    - [ ] Storymode
-    - [ ] Multiplayer mode
+    - [ ] Mythical animal taming
     - [ ] Sorting Hat 
     - [ ] Chess (life-sized, sorcerer's stone)
     - [ ] Platform 9 3/4
+    - [ ] Unique enemy battles (basilisk, giant spider, dementor)
+    - [ ] Dueling (npcs, lord voldemort)
     - [ ] Triwizard Tournament
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+    - [ ] Storymode
+    - [ ] Multiplayer mode
+- [ ] UI / UX
+    - [ ] Inventory
+    - [ ] Game menu
+    - [ ] User flow
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -241,31 +206,11 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- CONTRIBUTING -->
 ## Contributions
 
-* Jonas So Gutierrez - implemented VR hands, VR movement (continuous and teleport), VR grab, flying
-* Eugene Kang - implemented wand casting, player movement; created game environment, assets, and target dummies
-* Yena Kang - created spellbook, animal summoning (expecto patronum); researched and integrated voice recognition models (TensorFlow) 
-* Jaeha Yi - implemented wand casting, VR movement; created game environment, assets, and demo; researched and integrated voice recognition models (TensorFlow, Wit.ai)
-* John Yoon - implemented projectile firing, wand movement; researched and integrated voice recognition models (TensorFlow)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+* Jonas So Gutierrez - Implemented VR hands, VR movement (continuous and teleport), VR grab, and flying
+* Eugene Kang - Implemented spell casting, and player movement; Created game environment and target dummies
+* Yena Kang - Created spellbook, animal summoning (expecto patronum); Integrated voice recognition models (TensorFlow) 
+* Jaeha Yi - Implemented spell casting, VR movement, and enemies; Created game environment, UI, and demo; Integrated voice recognition models (TensorFlow, Wit.ai)
+* John Yoon - Implemented projectile firing, wand movement; Integrated voice recognition models (TensorFlow)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -274,16 +219,26 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Thank you to [XR@Berkeley](https://xr.studentorg.berkeley.edu/home/) for supporting our project! 
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Resources we found helpful and utilized throughout our journey: 
+
+XR
+* [XR setup](https://xr.studentorg.berkeley.edu/decal/labs/oculus/lab1/)
+* [XR movement](https://www.youtube.com/watch?v=Jvb7sAR2Tmk)
+
+Voice SDK 
+* [Incoroporate Voice SDK into Unity - Medium](https://medium.com/taikonauten-magazine-english/unity-mixed-reality-tutorial-voice-sdk-5f875043ab0a)
+* [Voice-enabled VR Unity App - GitHub](https://github.com/wit-ai/wit-unity/blob/main/Tutorials/ShapesTutorial.md)
+
+Features
+* [Animal Summoning](https://www.youtube.com/watch?v=vMd5GnP5c8o)
+* [Magic Effects](https://assetstore.unity.com/packages/vfx/particles/spells/magic-effects-free-247933)
+* [Endless Book](https://assetstore.unity.com/packages/3d/props/endlessbook-134213)
+* [Wand](https://assetstore.unity.com/packages/3d/props/weapons/3d-items-free-wand-pack-46225)
+
+Game Environment
+* [Dungeon](https://assetstore.unity.com/packages/3d/environments/dungeons/ultimate-low-poly-dungeon-143535)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -291,33 +246,11 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[Unity.com]: https://img.shields.io/badge/unity-000000?style=for-the-badge&logo=unity&logoColor=FFFFFF
+[Unity-url]: https://unity.com/
+[Meta.com]: https://img.shields.io/badge/Meta%20Quest-FFFFFF?style=for-the-badge&logo=meta&logoColor=0467DF
+[Meta-url]: https://developer.oculus.com/
+[Wit.ai]: https://img.shields.io/badge/wit.ai-B2E1FF?style=for-the-badge&logo=wit.ai
+[Wit.ai-url]: https://wit.ai/
 
