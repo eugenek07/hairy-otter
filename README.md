@@ -67,7 +67,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About the Project
 
-We're a team of UC Berkeley students (computer scientists, game developers, artists, and engineers) joined together to create an immersive and inspiring spellcasting game in virtual reality. 
+We're a team of UC Berkeley students (computer scientists, game developers, artists, and engineers) joined together to create an immersive and inspiring experience: spellcasting in virtual reality. 
 
 
 ### Demo 
