@@ -71,7 +71,8 @@ We're a team of UC Berkeley students (computer scientists, game developers, arti
 
 
 ### Demo 
-**05/06/2024**
+**[05/06/2024](https://youtu.be/Zb6GGkSUL1M)**
+
 [![Watch the demo](https://img.youtube.com/vi/Zb6GGkSUL1M/maxresdefault.jpg)](https://youtu.be/Zb6GGkSUL1M)
 
 
