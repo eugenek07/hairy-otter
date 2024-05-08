@@ -72,7 +72,7 @@ We're a team of UC Berkeley students (computer scientists, game developers, arti
 
 ### Demo 
 **05/06/2024**
-
+[![Watch the demo](https://img.youtube.com/vi/Zb6GGkSUL1M/maxresdefault.jpg)](https://youtu.be/Zb6GGkSUL1M)
 
 
 ### Built With
@@ -81,7 +81,6 @@ We're a team of UC Berkeley students (computer scientists, game developers, arti
 * [![Witai][Wit.ai]][Wit.ai-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
