@@ -105,6 +105,7 @@ Help improve the world of hairy otters! Follow these steps:
     * TextMeshPro
     * Unity UI
     * Universal RP
+    * AI Navigation
 
 ### Contributing 
 
