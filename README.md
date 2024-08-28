@@ -32,9 +32,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/hairy-otter-art.png" alt="Logo" width="160" height="120">
-  </a>
+  <img src="images/hairy-otter-art.png" alt="Logo" width="160" height="120">
 
   <h3 align="center">Hairy Otter</h3>
 
