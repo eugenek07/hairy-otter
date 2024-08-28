@@ -33,6 +33,7 @@
 <br />
 <div align="center">
   <img src="images/hairy-otter-art.png" alt="Logo" width="160" height="120">
+  <p style="color: #888888; font-size: 10px; margin-top: 5px;">Wizard Otter by arseniic</p>
 
   <h3 align="center">Hairy Otter</h3>
 
